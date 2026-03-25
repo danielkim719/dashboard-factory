@@ -12,8 +12,10 @@ export const keeperConfig: ClientConfig = {
   currency: "KRW",
   nav: [
     { label: "Overview", href: "/keeper", icon: "LayoutDashboard" },
+    { label: "파이프라인", href: "/keeper/pipeline", icon: "GitBranch" },
     { label: "목표 달성률", href: "/keeper/targets", icon: "Target" },
     { label: "채널 분석", href: "/keeper/channels", icon: "Megaphone" },
+    { label: "실패 분석", href: "/keeper/failures", icon: "XCircle" },
     { label: "리드 상세", href: "/keeper/leads", icon: "List" },
   ],
 }

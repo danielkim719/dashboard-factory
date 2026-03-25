@@ -14,18 +14,18 @@ export type KpiSummary = {
 }
 
 export const kpis: KpiSummary = {
-  totalLeads: 3856,
-  successCount: 301,
-  failCount: 2866,
+  totalLeads: 3878,
+  successCount: 303,
+  failCount: 2878,
   b2bCount: 72,
-  inProgressCount: 617,
+  inProgressCount: 625,
   conversionRate: 7.8,
-  avgLeadTimeDays: 13.4,
-  medianLeadTimeDays: 6,
-  avgCallResponseDays: 12.3,
+  avgLeadTimeDays: 27.6,
+  medianLeadTimeDays: 10,
+  avgCallResponseDays: 12.1,
   totalRevenue: 291090247,
   avgDealSize: 1228229,
-  callConnectCount: 860,
+  callConnectCount: 3273,
 }
 
 export type FunnelStage = {
@@ -35,10 +35,10 @@ export type FunnelStage = {
 }
 
 export const funnel: FunnelStage[] = [
-  { label: "총 리드", count: 3856, rate: null },
-  { label: "통화 연결", count: 860, rate: 22.3 },
-  { label: "상담 진행", count: 710, rate: 82.6 },
-  { label: "결제 완료", count: 301, rate: 42.4 },
+  { label: "총 리드", count: 3878, rate: null },
+  { label: "통화 연결", count: 3273, rate: 84.4 },
+  { label: "상담 진행", count: 3163, rate: 96.6 },
+  { label: "결제 완료", count: 303, rate: 9.6 },
 ]
 
 export type MonthlyData = {
@@ -58,10 +58,10 @@ export const monthlyData: MonthlyData[] = [
   { month: "2025-09", total: 221, success: 17, fail: 202, b2b: 2, pending: 0 },
   { month: "2025-10", total: 270, success: 20, fail: 250, b2b: 0, pending: 0 },
   { month: "2025-11", total: 236, success: 15, fail: 217, b2b: 0, pending: 4 },
-  { month: "2025-12", total: 838, success: 84, fail: 658, b2b: 1, pending: 95 },
-  { month: "2026-01", total: 512, success: 55, fail: 413, b2b: 18, pending: 26 },
-  { month: "2026-02", total: 854, success: 59, fail: 617, b2b: 35, pending: 143 },
-  { month: "2026-03", total: 688, success: 29, fail: 294, b2b: 16, pending: 349 },
+  { month: "2025-12", total: 838, success: 85, fail: 658, b2b: 1, pending: 94 },
+  { month: "2026-01", total: 512, success: 56, fail: 413, b2b: 18, pending: 25 },
+  { month: "2026-02", total: 854, success: 59, fail: 619, b2b: 35, pending: 141 },
+  { month: "2026-03", total: 710, success: 29, fail: 304, b2b: 16, pending: 361 },
 ]
 
 export type UtmSource = {
@@ -73,13 +73,13 @@ export type UtmSource = {
 }
 
 export const utmSources: UtmSource[] = [
-  { source: "(미추적)", total: 1710, success: 122, fail: 1372, rate: 7.1 },
-  { source: "facebook.business", total: 548, success: 48, fail: 349, rate: 8.8 },
-  { source: "naver.searchad", total: 483, success: 52, fail: 378, rate: 10.8 },
-  { source: "naver", total: 280, success: 50, fail: 195, rate: 17.9 },
+  { source: "(미추적)", total: 1715, success: 123, fail: 1372, rate: 7.2 },
+  { source: "facebook.business", total: 555, success: 48, fail: 349, rate: 8.6 },
+  { source: "naver.searchad", total: 486, success: 52, fail: 378, rate: 10.7 },
+  { source: "naver", total: 285, success: 51, fail: 195, rate: 17.9 },
   { source: "cashnote", total: 182, success: 0, fail: 156, rate: 0.0 },
   { source: "meta", total: 179, success: 18, fail: 157, rate: 10.1 },
-  { source: "danggeun_market", total: 98, success: 0, fail: 60, rate: 0.0 },
+  { source: "danggeun_market", total: 100, success: 0, fail: 60, rate: 0.0 },
   { source: "nemo", total: 83, success: 1, fail: 31, rate: 1.2 },
   { source: "exibition", total: 62, success: 1, fail: 16, rate: 1.6 },
   { source: "google", total: 44, success: 3, fail: 23, rate: 6.8 },
@@ -95,17 +95,7 @@ export type AgentPerf = {
   rate: number
 }
 
-export const agentPerformance: AgentPerf[] = [
-  { name: "(미배정)", total: 2485, success: 133, fail: 1992, rate: 5.4 },
-  { name: "이학영", total: 476, success: 50, fail: 231, rate: 10.5 },
-  { name: "권미희", total: 372, success: 37, fail: 289, rate: 9.9 },
-  { name: "김영훈", total: 213, success: 48, fail: 157, rate: 22.5 },
-  { name: "천세영", total: 187, success: 10, fail: 113, rate: 5.3 },
-  { name: "이요한", total: 52, success: 6, fail: 46, rate: 11.5 },
-  { name: "이도현", total: 46, success: 16, fail: 30, rate: 34.8 },
-  { name: "김기백", total: 21, success: 1, fail: 4, rate: 4.8 },
-  { name: "이용진", total: 4, success: 0, fail: 4, rate: 0.0 },
-]
+export const agentPerformance: AgentPerf[] = []
 
 export type EntryPath = {
   path: string
@@ -115,9 +105,9 @@ export type EntryPath = {
 }
 
 export const entryPaths: EntryPath[] = [
-  { path: "견적계산기", total: 1544, success: 131, rate: 8.5 },
-  { path: "빠른 상담하기 (도입문의)", total: 633, success: 76, rate: 12.0 },
-  { path: "도입문의", total: 425, success: 30, rate: 7.1 },
+  { path: "견적계산기", total: 1554, success: 132, rate: 8.5 },
+  { path: "빠른 상담하기 (도입문의)", total: 633, success: 77, rate: 12.2 },
+  { path: "도입문의", total: 436, success: 30, rate: 6.9 },
   { path: "(없음)", total: 305, success: 9, rate: 3.0 },
   { path: "토스", total: 172, success: 2, rate: 1.2 },
   { path: "창업 가이드 북 다운로드", total: 159, success: 2, rate: 1.3 },
@@ -135,10 +125,10 @@ export type TempLevel = {
 }
 
 export const temperatureData: TempLevel[] = [
-  { level: "상", total: 197, success: 35, rate: 17.8 },
-  { level: "중", total: 292, success: 17, rate: 5.8 },
-  { level: "하", total: 284, success: 9, rate: 3.2 },
-  { level: "(미평가)", total: 3083, success: 240, rate: 7.8 },
+  { level: "상", total: 198, success: 35, rate: 17.7 },
+  { level: "중", total: 317, success: 18, rate: 5.7 },
+  { level: "하", total: 325, success: 9, rate: 2.8 },
+  { level: "(미평가)", total: 3038, success: 241, rate: 7.9 },
 ]
 
 export type CohortFunnel = {
@@ -151,12 +141,11 @@ export type CohortFunnel = {
   dealRate: number
 }
 
-// 월별 코호트: 유입월별 퍼널 도달 (12월 이후만 부재중상태 데이터 유효)
 export const cohortFunnel: CohortFunnel[] = [
-  { month: "2025-12", total: 838, connected: 143, consulting: 143, deals: 84, connRate: 17.1, dealRate: 10.0 },
-  { month: "2026-01", total: 512, connected: 73, consulting: 73, deals: 55, connRate: 14.3, dealRate: 10.7 },
-  { month: "2026-02", total: 854, connected: 174, consulting: 164, deals: 59, connRate: 20.4, dealRate: 6.9 },
-  { month: "2026-03", total: 688, connected: 447, consulting: 304, deals: 29, connRate: 65.0, dealRate: 4.2 },
+  { month: "2025-12", total: 838, connected: 743, consulting: 742, deals: 85, connRate: 88.7, dealRate: 10.1 },
+  { month: "2026-01", total: 512, connected: 492, consulting: 492, deals: 56, connRate: 96.1, dealRate: 10.9 },
+  { month: "2026-02", total: 854, connected: 522, consulting: 519, deals: 59, connRate: 61.1, dealRate: 6.9 },
+  { month: "2026-03", total: 710, connected: 553, consulting: 447, deals: 29, connRate: 77.9, dealRate: 4.1 },
 ]
 
 export type ChannelCohort = {
@@ -170,30 +159,22 @@ export type ChannelCohort = {
 }
 
 export const channelCohorts: ChannelCohort[] = [
-  { month: "2025-12", channel: "facebook.business", total: 0, connected: 0, deals: 0, connRate: 0, dealRate: 0 },
-  { month: "2026-01", channel: "facebook.business", total: 149, connected: 17, deals: 19, connRate: 11.4, dealRate: 12.8 },
-  { month: "2026-02", channel: "facebook.business", total: 212, connected: 47, deals: 20, connRate: 22.2, dealRate: 9.4 },
-  { month: "2026-03", channel: "facebook.business", total: 187, connected: 151, deals: 9, connRate: 80.7, dealRate: 4.8 },
-  { month: "2025-12", channel: "naver.searchad", total: 120, connected: 13, deals: 21, connRate: 10.8, dealRate: 17.5 },
-  { month: "2026-01", channel: "naver.searchad", total: 109, connected: 4, deals: 7, connRate: 3.7, dealRate: 6.4 },
-  { month: "2026-02", channel: "naver.searchad", total: 85, connected: 16, deals: 15, connRate: 18.8, dealRate: 17.6 },
-  { month: "2026-03", channel: "naver.searchad", total: 82, connected: 60, deals: 3, connRate: 73.2, dealRate: 3.7 },
-  { month: "2025-12", channel: "naver", total: 68, connected: 8, deals: 12, connRate: 11.8, dealRate: 17.6 },
-  { month: "2026-01", channel: "naver", total: 70, connected: 4, deals: 14, connRate: 5.7, dealRate: 20.0 },
-  { month: "2026-02", channel: "naver", total: 71, connected: 21, deals: 12, connRate: 29.6, dealRate: 16.9 },
-  { month: "2026-03", channel: "naver", total: 46, connected: 36, deals: 8, connRate: 78.3, dealRate: 17.4 },
-  { month: "2025-12", channel: "meta", total: 155, connected: 12, deals: 16, connRate: 7.7, dealRate: 10.3 },
-  { month: "2026-01", channel: "meta", total: 7, connected: 0, deals: 1, connRate: 0.0, dealRate: 14.3 },
-  { month: "2026-02", channel: "meta", total: 9, connected: 1, deals: 1, connRate: 11.1, dealRate: 11.1 },
-  { month: "2026-03", channel: "meta", total: 1, connected: 1, deals: 0, connRate: 100.0, dealRate: 0.0 },
-  { month: "2025-12", channel: "cashnote", total: 31, connected: 0, deals: 0, connRate: 0.0, dealRate: 0.0 },
-  { month: "2026-01", channel: "cashnote", total: 0, connected: 0, deals: 0, connRate: 0, dealRate: 0 },
-  { month: "2026-02", channel: "cashnote", total: 45, connected: 1, deals: 0, connRate: 2.2, dealRate: 0.0 },
-  { month: "2026-03", channel: "cashnote", total: 98, connected: 36, deals: 0, connRate: 36.7, dealRate: 0.0 },
-  { month: "2025-12", channel: "danggeun_market", total: 0, connected: 0, deals: 0, connRate: 0, dealRate: 0 },
-  { month: "2026-01", channel: "danggeun_market", total: 0, connected: 0, deals: 0, connRate: 0, dealRate: 0 },
-  { month: "2026-02", channel: "danggeun_market", total: 16, connected: 2, deals: 0, connRate: 12.5, dealRate: 0.0 },
-  { month: "2026-03", channel: "danggeun_market", total: 82, connected: 60, deals: 0, connRate: 73.2, dealRate: 0.0 },
+  { month: "2026-01", channel: "facebook.business", total: 149, connected: 147, deals: 19, connRate: 98.7, dealRate: 12.8 },
+  { month: "2026-02", channel: "facebook.business", total: 212, connected: 170, deals: 20, connRate: 80.2, dealRate: 9.4 },
+  { month: "2026-03", channel: "facebook.business", total: 194, connected: 175, deals: 9, connRate: 90.2, dealRate: 4.6 },
+  { month: "2025-12", channel: "naver.searchad", total: 120, connected: 119, deals: 21, connRate: 99.2, dealRate: 17.5 },
+  { month: "2026-01", channel: "naver.searchad", total: 109, connected: 109, deals: 7, connRate: 100.0, dealRate: 6.4 },
+  { month: "2026-02", channel: "naver.searchad", total: 85, connected: 63, deals: 15, connRate: 74.1, dealRate: 17.6 },
+  { month: "2026-03", channel: "naver.searchad", total: 85, connected: 71, deals: 3, connRate: 83.5, dealRate: 3.5 },
+  { month: "2025-12", channel: "naver", total: 68, connected: 67, deals: 12, connRate: 98.5, dealRate: 17.6 },
+  { month: "2026-01", channel: "naver", total: 70, connected: 69, deals: 15, connRate: 98.6, dealRate: 21.4 },
+  { month: "2026-02", channel: "naver", total: 71, connected: 50, deals: 12, connRate: 70.4, dealRate: 16.9 },
+  { month: "2026-03", channel: "naver", total: 51, connected: 44, deals: 8, connRate: 86.3, dealRate: 15.7 },
+  { month: "2025-12", channel: "cashnote", total: 31, connected: 31, deals: 0, connRate: 100.0, dealRate: 0.0 },
+  { month: "2026-02", channel: "cashnote", total: 45, connected: 25, deals: 0, connRate: 55.6, dealRate: 0.0 },
+  { month: "2026-03", channel: "cashnote", total: 98, connected: 81, deals: 0, connRate: 82.7, dealRate: 0.0 },
+  { month: "2026-02", channel: "danggeun_market", total: 16, connected: 12, deals: 0, connRate: 75.0, dealRate: 0.0 },
+  { month: "2026-03", channel: "danggeun_market", total: 84, connected: 69, deals: 0, connRate: 82.1, dealRate: 0.0 },
 ]
 
 export type LeadTimeBucket = {
@@ -202,10 +183,10 @@ export type LeadTimeBucket = {
 }
 
 export const leadTimeBuckets: LeadTimeBucket[] = [
-  { range: "당일", count: 31 },
-  { range: "1-3일", count: 47 },
-  { range: "4-7일", count: 36 },
-  { range: "8-14일", count: 30 },
-  { range: "15-30일", count: 37 },
-  { range: "31일+", count: 23 },
+  { range: "당일", count: 35 },
+  { range: "1-3일", count: 49 },
+  { range: "4-7일", count: 43 },
+  { range: "8-14일", count: 37 },
+  { range: "15-30일", count: 55 },
+  { range: "31일+", count: 72 },
 ]

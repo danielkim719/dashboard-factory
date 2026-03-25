@@ -4,8 +4,10 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   LayoutDashboard,
+  GitBranch,
   Megaphone,
   Target,
+  XCircle,
   List,
   Bell,
   ChevronDown,
@@ -16,8 +18,10 @@ import { Separator } from "@/components/ui/separator"
 
 const iconMap: Record<string, React.ReactNode> = {
   LayoutDashboard: <LayoutDashboard className="w-4 h-4" />,
+  GitBranch: <GitBranch className="w-4 h-4" />,
   Target: <Target className="w-4 h-4" />,
   Megaphone: <Megaphone className="w-4 h-4" />,
+  XCircle: <XCircle className="w-4 h-4" />,
   List: <List className="w-4 h-4" />,
 }
 
